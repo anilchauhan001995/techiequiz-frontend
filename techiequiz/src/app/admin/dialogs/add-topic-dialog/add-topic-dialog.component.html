@@ -1,0 +1,24 @@
+<mat-toolbar class="topic-header" color="primary">Add Topic</mat-toolbar>
+
+<div class="container">
+  <mat-form-field class="w-100">
+    <mat-label>Select Subject</mat-label>
+    <mat-select>
+      <mat-option></mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <form class="example-form mt-2">
+    <mat-form-field class="w-100">
+      <input matInput [(ngModel)]="topName" name="topName" placeholder="Topic Name">
+    </mat-form-field>
+  
+    <mat-form-field class="w-100">
+      <textarea matInput [(ngModel)]="topDesc" name="topDesc" placeholder="Topic Description"></textarea>
+    </mat-form-field>
+  
+    <button *ngIf="isAddMode" mat-raised-button class="text-center" color="accent" (click)="addTopic()"> Add Topic</button>
+    <button *ngIf="!isAddMode" mat-raised-button class="text-center" color="accent" (click)="updateTopic()"> Update Topic</button>
+  </form>
+
+</div>

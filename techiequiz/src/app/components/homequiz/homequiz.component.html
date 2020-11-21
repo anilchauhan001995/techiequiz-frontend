@@ -1,0 +1,62 @@
+<div class="container quiz-home-main">
+  <div class="row space-20 text-center">
+    <div class="col-12">
+      <h3 class="varela new-black">Test</h3>
+      <p class="varela darkest-grey"> Hand jhqge jdjhf khrf unfkj hnf jer</p>
+  </div>
+</div>
+<div class="container margin-b20">
+  <div  class="row mt-2">
+    <div *ngFor="let subject of subjects;" class="col-3 p-2 subject-mat-card">
+      <a ><mat-card appMaterialElevation class="text-center"><mat-card-content>{{subject.subName}}</mat-card-content></mat-card></a>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="m-2 mt-4">
+  <mat-card  class="text-center dropdown-header">
+      <span class="mr-4">Hello, world!</span>
+      <mat-form-field>
+        <mat-select placeholder="">
+          <mat-option *ngFor="let subject of subjects" [value]="subject.subId">
+            {{subject.subName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  </mat-card>
+</div>
+
+<div class="m-4">
+  <mat-card appMaterialElevation class="mt-2">
+    <mat-card-header>
+      <div class="col-8">
+        <mat-card-title class="varela subject-list-font">Basic Oop's Concept</mat-card-title>
+      </div>
+      <div class="col-4">
+        <button mat-raised-button color="warn">Take Test</button>
+      </div>
+    </mat-card-header>
+  </mat-card>
+  <mat-card appMaterialElevation class="mt-3">
+    <mat-card-header>
+      <div class="col-8">
+        <mat-card-title class="varela subject-list-font">Basic Oop's Concept</mat-card-title>
+      </div>
+      <div class="col-4">
+        <button mat-raised-button color="warn">Take Test</button>
+      </div>
+    </mat-card-header>
+  </mat-card>
+  <mat-card appMaterialElevation class="mt-3">
+    <mat-card-header>
+      <div class="col-8">
+        <mat-card-title class="varela subject-list-font">Basic Oop's Concept</mat-card-title>
+      </div>
+      <div class="col-4">
+        <button mat-raised-button color="warn">Take Test</button>
+      </div>
+    </mat-card-header>
+  </mat-card>
+</div>
